@@ -1,0 +1,16 @@
+#start-game{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1{
+        margin-bottom: 15px;
+    }
+    p{
+        margin-bottom: 30px;
+        max-width: 400px;
+        text-align: center;
+    }
+}
