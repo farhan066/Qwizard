@@ -16,7 +16,7 @@ console.log(result)
 
 // ======== //
 async function fetchQuizzes(){
-  const res = await fetch("https://opentdb.com/api.php?amount=5&category=18&difficulty=easy&type=multiple")
+  const res = await fetch("https://opentdb.com/api.php?amount=5&category=9&difficulty=easy&type=multiple")
   const data = await res.json()
   const results = data.results
   
@@ -102,6 +102,12 @@ async function fetchQuizzes(){
     })
     setShowScore(correctCount + "/5")
   }
+  function newGame(){
+    fetchQuizzes()
+    setResult([])
+    setSelectedAnswers([])
+    setShowScore()
+  }
   return(
     <main>
 
@@ -116,8 +122,9 @@ async function fetchQuizzes(){
         {
           quizActive &&
           <div className="bottom">
-            {showScore && <p className="score">You scored {showScore} correct answers</p>}
-            <button className='btn multi-btn' onClick={checkAnswers}>Check Answers</button>
+            {showScore && <p className="score">Score: {showScore}</p>}
+            {!showScore && <button className='btn multi-btn' onClick={checkAnswers}>Check Answers</button>}
+            {showScore && <button className='btn multi-btn' onClick={newGame}>Play again</button>}
           </div>
         }
 
@@ -128,3 +135,5 @@ async function fetchQuizzes(){
 
 
 // https://opentdb.com/api.php?amount=5&category=9&difficulty=easy&type=multiple
+//GK - https://opentdb.com/api.php?amount=5&category=9&difficulty=easy&type=multiple
+//Gadget - https://opentdb.com/api.php?amount=5&category=30&difficulty=easy&type=multiple
