@@ -12,11 +12,11 @@ const [quizzes, setQuizzes] = useState([])
 const [selectedAnswers, setSelectedAnswers] = useState([])
 const [result, setResult] = useState([])
 
-console.log(result)
+// console.log(result)
 
 // ======== //
 async function fetchQuizzes(){
-  const res = await fetch("https://opentdb.com/api.php?amount=5&category=9&difficulty=easy&type=multiple")
+  const res = await fetch("https://opentdb.com/api.php?amount=5&category=18&difficulty=medium&type=multiple")
   const data = await res.json()
   const results = data.results
   
@@ -49,9 +49,9 @@ async function fetchQuizzes(){
       fetchQuizzes()
     }, [quizActive])
 
-  console.log(quizzes)
+  // console.log(quizzes)
 
-  console.log(selectedAnswers)
+  // console.log(selectedAnswers)
 
   function quizElements(){
     if(quizzes){
@@ -131,9 +131,3 @@ async function fetchQuizzes(){
     </main>
   )
 }
-
-
-
-// https://opentdb.com/api.php?amount=5&category=9&difficulty=easy&type=multiple
-//GK - https://opentdb.com/api.php?amount=5&category=9&difficulty=easy&type=multiple
-//Gadget - https://opentdb.com/api.php?amount=5&category=30&difficulty=easy&type=multiple
