@@ -16,7 +16,7 @@ Qwizard is a simple quiz app created as part of a Scrimba Pro project challenge.
 
 ## Screenshot
 
-![Qwizard Screenshot](.src/assets/screenshot.png)
+![Qwizard Screenshot](./src/assets/screenshot.png)
 
 ## License
 
