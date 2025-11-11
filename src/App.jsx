@@ -12,7 +12,7 @@ const [quizzes, setQuizzes] = useState([])
 const [selectedAnswers, setSelectedAnswers] = useState([])
 const [result, setResult] = useState([])
 
-// console.log(result)
+console.log("By Farhan - github.com/farhan066")
 
 // ======== //
 async function fetchQuizzes(){
